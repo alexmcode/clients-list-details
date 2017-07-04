@@ -1,11 +1,13 @@
-<div class="container-fluid">
+<div class="container">
   <div class="row">
 
-    <input type="text"
-          [(ngModel)]="inputCampaignId"
-          (ngModelChange)="onChange($event)">
-    
-    <span class="glyphicon glyphicon-search"></span>
+    <div>
+      <input id="search-input" type="text"
+            [(ngModel)]="inputCampaignId"
+            (ngModelChange)="onChange($event)">
+            
+      <span class="glyphicon glyphicon-search"></span>
+    </div>
 
   </div>
 </div>
