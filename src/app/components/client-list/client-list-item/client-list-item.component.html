@@ -1,0 +1,13 @@
+<a [routerLink]="[clientId]" class="list-group-item clearfix" routerLinkActive="active">
+  
+  <span class="pull-left">
+      <img id="img-thumbnail" class="img-responsive"
+           src="{{client.general.avatar}}"/>
+  </span>
+
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{client.general.firstName}} {{client.general.lastName}}</h4>
+    <p class="list-group-item-text">{{client.job.title}}</p>
+  </div>
+
+</a>

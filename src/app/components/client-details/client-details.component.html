@@ -1,0 +1,45 @@
+<div>
+  <div class="row">
+
+    <div class="col-md-3">
+
+      <img id="profile-img" class="img-responsive"
+              src="{{selectedClient?.general.avatar}}"/>
+
+    </div>
+
+    <div class="col-md-9">
+
+      <div *ngIf="clientId">
+        
+        <div class="row">
+          <h1>{{ selectedClient?.general.firstName }} {{ selectedClient?.general.lastName }}</h1>
+        </div>
+        
+        <div class="row">
+          <h2>{{ selectedClient?.job.title }} - {{ selectedClient?.job.company }}</h2>
+        </div>
+        <hr />
+        <div class="row">
+          <h4>Email: {{ selectedClient?.contact.email }}</h4>
+          <h4>Phone: {{ selectedClient?.contact.phone }}</h4>
+        </div>
+        <hr />
+        <div class="row">
+          <h4>Address</h4>
+          <h4>Street: {{ selectedClient?.address.street }}</h4>
+          <h4>City: {{ selectedClient?.address.city }}</h4>
+          <h4>Country: {{ selectedClient?.address.country }}</h4>
+          <h4>ZipCode: {{ selectedClient?.address.zipCode }}</h4>
+        </div>
+
+      </div>
+
+      <div *ngIf="!clientId">
+        <h1>Please select a client!</h1>
+      </div>
+
+    </div>
+
+  </div>
+</div>

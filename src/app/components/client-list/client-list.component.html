@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <input type="text"
+          [(ngModel)]="inputCampaignId"
+          (ngModelChange)="onChange($event)">
+    
+    <span class="glyphicon glyphicon-search"></span>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+
+      <app-client-list-item *ngFor="let client of allClientsList" 
+                            [client]="client"
+                            [clientId]="client.contact.email">
+      </app-client-list-item>
+    
+    </ul>
+  </div>
+</div>
